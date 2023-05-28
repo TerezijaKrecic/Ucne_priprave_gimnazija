@@ -1,0 +1,70 @@
+%priprava posamezne ure
+%tukaj zaporedoma napisemo{st. zaporedne ure}{datum}{naslov}{poglavje}{oblika dela}{pripomocki}
+\begin{priprava}{}{}{Zaporedja}{Aritmetično zaporedje}{frontalna}{tabla}
+
+Kaj je skupno naslednjim zaporedjem (konstantna razlika \didopomba{splošni člen poračunate potem, razen če ga kdo sam ugane}):
+\begin{align*}
+    & 3, 5, 7, 9, 11, 13, \ldots && a_n = 2n+1 && d = 2 \\
+    & 8, 5, 2, -1, -4, \ldots && a_n = -3n+11 && d = -3 \\
+    & 5, 5, 5, 5, 5, \ldots && a_n = 5 && d = 0
+\end{align*}
+
+Zaporedje je \emph{aritmetično}, kadar je razlika med zaporednimi členi konstantna:
+$$ a_n - a_{n-1} = d \text{ za vsak } n \in \NN $$
+
+Za splošno zaporedje $ a_1, a_2, a_3, a_4, \ldots, a_n, \ldots $ lahko zapišemo splošni člen:
+\begin{align*}
+    & a_1 \\
+    & a_2 = a_1 + d \\
+    & a_3 = a_2 + d = a_1 + 2d \\
+    & a_4 = a_3 + d = a_1 + 3d \\
+    & \vdots \\
+    & \bf{a_n = a_1 + (n-1)d}
+\end{align*}
+
+\didopomba{Tu naj primere predlagajo sami}
+\begin{itemize}
+    \item $ d > 0 \rightarrow $ naraščajoče (npr. $ 1, 2, 3, \ldots $)
+    \item $ d < 0 \rightarrow $ padajoče (npr. $ 1, \frac{1}{2}, \frac{1}{3}, \ldots $)
+    \item $ d = 0 \rightarrow $ konstantno (npr. $ 3, 3, 3, \ldots $)
+    \item primer, ki ne spada nikamor, npr. $ 1, 2, 3, 2, 8, 6, 4, \ldots $.
+\end{itemize}
+
+\vaje{Vaja:
+\begin{itemize}
+    \item Izračunamo splošni člen s to formulo za zgornje tri primere. Ali so zaporedja naraščajoča, padajoča, \ldots?
+    \item Iz splošnega člena prvih nekaj členov in $(2n+1)$-ti člen ali kaj podobnega
+    \item Dokaži, da je zaporedje $ a_n = 55 - 12n $ aritmetično. (izračunati $ d, a_5, a_{20} \ldots $)
+    \item Naj bodo $ a, x, b $ zaporedni členi aritmetičnega zaporedja. Koliko je $ x $?
+    \subitem \textcolor{black}{$ x - a = b - x \rightarrow x = \frac{a+b}{2} $ je \textbf{aritmetična sredina} ali \textbf{povprečje} števil $ a $ in $ b $.}
+    \item Za katere $ x $ so to zaporedni členi zaporedja? $ x^2 - 3, x -1, 1 - 2x $ \didopomba{Lahko direkt iz enakosti razlik. Za $ d $ pa en life hack: $ a_1, a_2, a_3 $ zaporedni členi aritmetičnega zaporedja: namesto  $ a_1, a_2 = a_1 + d, a_3 = a_1 + 2d $ gledaš $ a_1 = a_2 - d, a_2, a_3 = a_2 + d $.}
+\end{itemize}
+}
+
+\newpage
+
+\naslov{Vsota aritmetičnega zaporedja}
+
+\begin{equation*}
+    \begin{split}
+    S_n & = \sum_{i=1}^{n} a_i = a_1 + a_2 + \ldots + a_n = \\
+    & = a_1 + a_1 + d + \ldots + a_1 + (n-1) d = \\
+    & = a_n + a_n - d + \ldots + a_n - (n-1) d \\
+    \text{Seštejemo in dobimo: } 2S_n & = n(a_1 + a_n) \\
+    S_n & = \frac{n}{2}(a_1 + a_n) = \frac{n}{2}(a_1 + a_1 + (n-1)d) = \frac{n}{2}(2a_1 + (n-1)d)
+    \end{split}
+\end{equation*}
+
+\vaje{
+Vaje:
+\begin{itemize}
+    \item Vsota nekega zaporedja npr. števila od 1 do 100 \didopomba{Tega že znamo z Gaussovo metodo, po ``sendviču'', lahko primerjamo, da dobimo enako.}
+    \item Vsota od m-tega do n-tega člena (in vemo le npr. četrti člen in vsoto tretjega in petega) \didopomba{$ S_n - S_m $}
+    \item Izračunaj primeren $ x $: $ 5 + 9 + 13 + \ldots + x = 5355 $.
+    \item Rešitvi spodnjih enačb sta \didopomba{sam mora pogruntati, da je manjši drugi člen in večji šesti člen} člena $a_2$ in $a_6$ naraščajočega aritmetičnega zaporedja. Najmanj koliko členov tega zaporedja moramo sešteti, da dobimo vsaj 550? \\
+    $ 3 \cdot 2^{x + 2} - 6 \cdot 2^x = 2^5 - 20 $ \\
+    $ \log_3 (x - 5) - 2 = 0 $
+\end{itemize}
+}
+
+\end{priprava}

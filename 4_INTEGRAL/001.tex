@@ -1,0 +1,126 @@
+%priprava posamezne ure
+%tukaj zaporedoma napisemo{st. zaporedne ure}{datum}{naslov}{poglavje}{oblika dela}{pripomocki}
+\begin{priprava}{}{}{Integral}{Nedoločeni integral}{frontalna}{tabla}
+
+\didopomba{Začnemo s tabelo. Na levi so $ F(x) $, na desni pa $ F'(x) = f(x) $. Najprej izračunamo nekaj odvodov danih $ F $, potem pa v naslednjo vrstico ne vpišeš več znanega $ F $, temveč $ f $} \vaje{Katero funkcijo smo odvajali, da smo dobili $ f(x) = 2x + 3 $?} \didopomba{Naj sami poskušajo ugotoviti, ker znajo odvajati $ \rightarrow x^2 + 3x $. Potem temu dopišeš še npr. $ + 4 $, kaj pa ta funkcija? Naj pogruntajo, da lahko dobljeni funkciji prištejejo katerokoli konstanto in se njen odvod s tem ne spremeni.}
+
+Problem: Iščemo $ F(x) $, za katero velja $ F'(x) = f(x) $. Določanju take funkcije pravimo \emph{integriranje}. \didopomba{SLIKCA s puščicama: F(x) -> odvajanje -> f(x) ter f(x) -> integriranje -> F(x)} Ker je $ c' = 0 $, lahko $ F(x) $ določimo do konstante natančno: $ F(x) + c $.
+
+
+\emph{Nedoločen integral funkcije $ f(x) $ je funkcija, katere odvod je enak $ f(x) $.} Oznake:
+
+$$ \int f(x) dx = F(x) + c \Longleftrightarrow (F(x) + c)' = F'(x) = f(x) $$ 
+
+\textcolor{rdeca}{Razlaga $ dx $:} Mogoče kar tako, da je to pač oznaka. Pred $ dx $ NI MNOŽENJA, ampak je to zraven. $ dx $ pove, po kateri spremenljivki integriramo (npr. če je v integralu več črk, vse razen $ x $ obravnavamo kot konstante). Ni treba preveč se trudit, pač ga bomo potrebovali kasneje (pri uvedbi nove spremenljivke in določenem integralu).
+
+\naslov{Tabela integralov}
+
+\didopomba{Naj bo enake oblike kot pri odvodih (če je bila tam po alinejah, naj bo tudi tu itd.) Naj pravila sami pogruntajo.}
+
+\begin{itemize}
+    \item $ \int k dx = kx + c $
+    \item $ \int x^n dx = \frac{x^{n+1}}{n + 1} + c; n \ne -1 $
+    \item $ \int \frac{1}{x} dx = \ln |x| + c $
+    \item ...
+\end{itemize}
+
+Opomba: $ ln|x| $, od kje pride absolutna? \textcolor{rdeca}{funkcijo $ ln |x| $ se spoznain odvaja že pri odvodih! Izkaže se, da je njen odvod enak $ 1/x $ ne glede na predznak $ x $-sa.}
+
+% Lastnosti
+
+\naslov{Pravila}
+\didopomba{sledijo iz odvajanja}
+\begin{itemize}
+    \item $ \int(f(x) \pm g(x)) dx = \int f(x) dx \pm \int g(x) dx $
+    \item $ \int c \cdot f(x) dx = c \int f(x) dx $ 
+    \item za produkt in količnik (kot pri odvodu) to ne gre! \\
+            Primer: $ \int 2x dx \ne \int 2 dx \cdot \int x dx $, $ \int \frac{x}{2} dx \ne \frac{\int x dx}{\int 2 dx} $
+\end{itemize}
+
+\newpage
+
+\vaje{
+Vaje: 
+\begin{itemize}
+    \item Začnemo postopoma, z osnovnimi integrali, s + in -, nato kakšno racionalno, kotne funkcije, pač golo računanje, MENJUJEMO ČRKE (ne le $ x $) \dots
+    \item Poišči predpis za funkcijo, ki gre skozi $ A(1,2) $ in je njen odvod enak $ g'(x) = \frac{2}{x^3} + 4 $. \didopomba{lahko najprej geometrijsko, s tangentami, ampak mora biti vredu izbran primer}
+\end{itemize}
+}
+
+\naslov{Uvedba nove spremenljivke}
+
+\vaje{Izračunaj integral $ \int (3x - 4)^6 dx $.}
+
+\didopomba{Ni treba pisati postopka. Lahko bi izračunali šesto potenco izraza, vendar obstaja lažja pot. Označimo izraz $ 3x - 4 $ s spremenljivko, npr. s $ t $ ($ t $ je sedaj funkcija $ x $) in to vstavimo v integral}: $ \int t^6 dx $ \didopomba{V integralu je $ t $, ampak mi integriramo po $ x $-su, torej bo treba nekaj popravit \ldots}
+
+$ t = 3x - 4 $ \didopomba{sedaj uporabimo znanje od diferencialih}\\
+$ dt = t' dx = 3 dx \rightarrow dx = \frac{dt}{3} $ \\
+$ \int (3x - 4)^6 dx = \int t^6 \frac{dt}{3} = \int \frac{t^6}{3} dt = \frac{t^7}{3 \cdot 7} + c = \frac{(3x - 4)^7}{21} + c $
+
+\vaje{
+Vaje: 
+\begin{itemize}
+    \item Veliko izbire za golo računanje \dots
+    \item $ \int \frac{3x^2}{x^3 + 2} dx \rightarrow \int \frac{f'(x)}{f(x) dx} = \ln |f(x)| + c $
+    \item $ \int \frac{dx}{x^2 + 4} \rightarrow \int \frac{dx}{x^2 + a^2} = \frac{1}{a} \arctan \frac{x}{a} + c $
+    \item $ \int \frac{x^2 + 2x - 1}{x^2 - 1} dx $: če je stopnja števca $ \geq $ stopnja imenovalca, se deli in posebej integrira.
+    \item $ \int \frac{2}{1 - x^2} dx $: če je stopnja števca $ < $ stopnja imenovalca in se ne da zlahka integrirat, se izraz razstavi s pomočjo parcialnih ulomkov: \\
+    $ \frac{2}{1 - x^2} = \frac{A}{1 - x} + \frac{B}{1 + x} $ \ldots
+\end{itemize}
+}
+
+\naslov{Per partes (integriranje po delih)}
+
+\didopomba{Uvodni primer za motivacijo, ker ga ne znamo z novo spremenljivko rešit ...}
+
+\vaje{$ \int x e^x dx = $ ?}
+
+\didopomba{Radi bi integral preoblikovali v obliko, ki bi jo znali rešiti:}
+
+$ u(x) \cdot v(x) $ \didopomba{2 puščici, v desno ``odvajanje'', v levo ``integriranje''} $ u'(x)v(x) + u(x)v'(x) $
+
+Torej $ u(x) \cdot v(x) = \int u'(x)v(x) dx + \int u(x)v'(x)dx $
+
+Zaradi boljše preglednosti spustimo argument $ (x) $ ter preuredimo v obliko $ \int u v'dx = u \cdot v - \int u' v dx $
+
+Zdaj lahko rešimo primer: 
+
+
+$
+= \int v(x)du + \int u(x)dv $ \didopomba{kjer sta $ u'(x)dx = du, v'(x)dx = dv $} \\
+$ u \cdot v = \int v du + \int u dv \\
+\text{Običajno zapišemo v obliki } \textcolor{rdeca}{\int u dv = u \cdot v - \int v du}
+$
+\didopomba{Večkrat je integral na desni enostavnejši od levega.}
+
+\newpage
+
+\didopomba{Rešimo začetni primer. Za $ u $ običajno daš tisti del, ki se z odvajanjem poenostavi. Na koncu rezultat odvajamo, da preverimo, ali smo prav.}
+
+$ u = x \rightarrow du = dx \\
+dv = e^xdx \rightarrow v = e^x $
+(pri integriranju $ dv $ ne pišemo $ c $-ja)
+
+\vaje{
+Vaje: 
+\begin{itemize}
+    \item $ \int x \sin x dx $
+    \item $ \int \ln x dx $
+    \item $ \int x^3 \ln x dx $
+    \item $ \int e^x sin x dx $ Dvakratni per partes! \didopomba{$ u = e^x $}
+\end{itemize}
+}
+
+\vaje{
+Še kakšne posebne vaje:
+\begin{itemize}
+    \item Dan odvod funkcije in točka, skozi katero gre (poišči to funkcijo)
+    \item $ \int cos x sin 3x dx $ zahteva uporabo $ sin x cos y = \frac{1}{2} (sin(x-y) + sin (x+y)) $
+\end{itemize}
+}
+
+\naslov{Zanimive stvarce}
+
+Geometrijski pomen integrala npr. $ f'(x) = 1 - x, f(0) = 0 $. Narišeš si premico, ki jo predstavlja odvod, na drugem grafu pa s tangentami začrtaš obliko parabole.
+    
+\end{priprava}

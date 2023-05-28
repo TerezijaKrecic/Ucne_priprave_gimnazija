@@ -1,0 +1,44 @@
+%priprava posamezne ure
+%tukaj zaporedoma napisemo{st. zaporedne ure}{datum}{naslov}{poglavje}{oblika dela}{pripomocki}
+\begin{priprava}{}{}{Zaporedja}{Popolna ali matematična indukcija}{frontalna}{tabla}
+
+Koliko je vsota prvih $ n $ lihih števil ($ S_n $)?
+\begin{equation*}
+    \begin{split}
+S_1 & = 1 \\
+S_2 & = 1 + 3 = 4 \\
+S_3 & = 1 + 3 + 5 = 9 \\
+S_4 & = 1 + 3 + 5 + 7 = 16 \\
+S_5 & = 25 \\
+\vdots \\
+S_n & = 1 + 3 + 5 + 7 + \ldots + 2n - 1
+    \end{split}
+\end{equation*}
+Zdi se nam, da je $ S_n = n^2 $. Kako to preverimo?
+
+\emph{Popolna ali matematična indukcija} je način dokazovanja iz posameznega v splošno (najpogosteje pri naravnih številih). Poteka v dveh korakih:
+\begin{enumerate}
+    \item korak: preverimo, ali trditev velja za $ n = 1 $
+    \item korak (\emph{indukcijski korak}): ob predpostavki, da velja za $ n $, je treba dokazati, da velja za $ n + 1 $
+\end{enumerate}
+
+Preverimo pri zgornjem primeru:
+\begin{enumerate}
+    \item $ n = 1 $: $ S_1 = 1 = 1^2 $, formula drži
+    \item $ n \rightarrow n + 1 $:
+        \subitem indukcijska predpostavka: $ S_n = n^2 $
+        \subitem indukcijski korak: $ S_{n+1} = (n+1)^2 $ (to želimo pokazati)
+        \subitem $ S_{n+1} = S_n + a_{n+1} = n^2 + (2n + 1) = (n + 1)^2 $, s tem smo dokazali pravilnost formule
+\end{enumerate}
+
+\vaje{
+Vaje:
+\begin{itemize}
+    \item Trdim, da je $ \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \ldots + \frac{1}{n(n+1)} = \frac{n}{n+1} $. Dokaži, da je to res.
+    \item Dokaži, da 31 deli števila oblike $ 5^{n+2} + 6^{2n+1} $
+\end{itemize}
+}
+
+NEVARNOSTI (vsaka neprazna množica ima enake elemente), NEPRAVILNA RABA ...
+
+\end{priprava}

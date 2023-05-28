@@ -1,0 +1,42 @@
+%priprava posamezne ure
+%tukaj zaporedoma napisemo{st. zaporedne ure}{datum}{naslov}{poglavje}{oblika dela}{pripomocki}
+\begin{priprava}{}{}{Zaporedja}{Lastnosti zaporedja}{frontalna}{tabla}
+
+% (končno, neskončno, monotonost, omejenost, konvergentnost …)
+
+Ali imajo naslednja zaporedja kakšne posebne lastnosti? \didopomba{Če ni odziva, kar direkt vprašaš ``ali narašča?'' ipd.}
+\begin{align*}
+    & -2, -1, 0, 1, 2, 3, 4, 5, \ldots \\
+    & 16, 8, 4, 2, 1, \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \ldots \\
+    & 1, -1, 2, -2, 3, -3, 4, -4, \ldots \\
+    & 2, 0, 1, -1, 0, -2, -1, -3, \ldots
+\end{align*}
+
+
+Glede na urejenost je zaporedje \didopomba{lahko zraven narišeš primere grafov zaporedij, ki ustrezajo tej lastnosti ...}:
+\begin{itemize}
+    \item \emph{naraščajoče}, če za vsak $ n \in \NN $ velja $ a_n \leq a_{n+1} $ \didopomba{torej to mora veljati za VSAKA sosednja člena!},
+    \subitem \emph{strogo} naraščajoče: $ a_n < a_{n+1} $,
+    \item \emph{padajoče}, če za vsak $ n \in \NN $ velja $ a_n \geq a_{n+1} $,
+    \subitem \emph{strogo} padajoče: $ a_n > a_{n+1} $,
+    \item \emph{alternirajoče/spreminjajoče}, če ??? (pri grafičnem prikazu dobiš žagico, ne gre za spreminjanje predznakov),
+    \item nič od naštetega (npr. $ 1, 2, 3, 2, 3, 4, 3, 4, 5, \ldots $).
+\end{itemize}
+
+Glede na omejenost je zaporedje \didopomba{spet nariši kakšen grafični prikaz}:
+\begin{itemize}
+    \item \emph{navzdol omejeno}, če obstaja $ m \in \RR $, da so vsi členi zaporedja večji ali enaki od njega: $ a_n \geq m $ za vsak $ n \in \NN $.
+    \item \emph{navzgor omejeno}, če obstaja $ M \in \RR $, da so vsi členi zaporedja manjši ali enaki od njega: $ a_n \leq M $ za vsak $ n \in \NN $.
+    \item \emph{omejeno}, če je navzdol in navzgor omejeno (obstajata $ m, M \in \RR $, da za vse člene zaporedja velja: $ m \leq a_n \leq M $ za vsak $ n \in \NN $).
+\end{itemize}
+
+\vaje{
+Vaje:
+\begin{itemize}
+    \item Dokaz naraščanja/padanja zaporedij (izberi primer, kjer to ni očitno, npr. kakšen racionalen splošni člen \ldots) \didopomba{Torej ali je $ a_n - a_{n-1} \leq $ ali $ \geq 0$}
+    \item Padajoče zaporedje je navzgor omejeno s prvim členom
+    \item Konstantno zaporedje -> ni STROGO naraščajoče/padajoče zaporedje
+\end{itemize}
+}
+
+\end{priprava}
