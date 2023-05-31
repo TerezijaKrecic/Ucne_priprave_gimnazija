@@ -25,20 +25,26 @@ Koliko je ploščina območja, ki ga funkcija $ f(x) = x - 1 $ na intervalu $ [2
 
 \didopomba{Naj sami predlagajo, da območje razdelimo na znane like, pravokotnike, recimo z enako širino -- ampak s kakšno višino? Ploščino lahko omejimo z zgornjo in spodnjo vsoto (razloži, kaj je to, čim manj oznak, le aplet glej!), in velja, da je ploščina območja vedno omejena od spodaj s spodnjo vsoto, od zgoraj pa z zgornjo vsoto. Če vzamemo vedno ožje pravokotnike, se vsoti z obeh strani približujeta ploščini.}
 
-\didopomba{Zdaj pa rišemo v zvezek, kot kaže spodnja slika. Ploščino lahko zapišemo kot vsoto pravokotnikov s širino $ dx $ in višino $ f(x) $, kjer so $ x $-i neke točke iz intervala $ [a, b] $. Ker hočemo zelo zelo tanke pravokotnike, bomo namesto ene velike vsote zapisali to kot integral -- integral je v bistvu ena vsota, kjer se pomikamo po res majcenih korakih.}
+\didopomba{Zdaj pa rišemo v zvezek, kot kaže spodnja slika. Ploščino lahko zapišemo kot vsoto pravokotnikov s širino $ \Delta_i $ in višino $ f(x_i) $, kjer so $ x_i $ ``delilne točke'' intervala $ [a, b] $. Več je $ x_i $-jev, bolj bo ploščina pravokotnikov podobna pravi ploščini. V limiti iz vsote dobimo integral; integral je v bistvu ena vsota, kjer se pomikamo po res neskončno majhnih korakih.}
 
 \newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{slike/vsote.png}
+\end{figure}
 
+$$
+S = \lim_{n \rightarrow \infty} \sum_{x_i} f(x_i) \cdot \Delta_i = \int_a^b f(x) dx
+$$
+
+\textcolor{rdeca}{Določeni integral $ \int_a^b f(x) dx $ je enak ploščini lika, ki je omejen z grafom funkcije $ f $, $ x $-osjo ter premicama $ x = a $ in $ x = b $.}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{slike/dol_int_skica.png}
 \end{figure}
 
-
-\textcolor{rdeca}{Določeni integral $ \int_a^b f(x) dx $ je enak ploščini lika, ki je omejen z grafom funkcije $ f $, $ x $-osjo ter premicama $ x = a $ in $ x = b $.} Pogoj: $ f (x) $ je zvezna in na $ [a, b] $ nenegativna. \didopomba{Za zvezno lahko pokažeš, da odsekoma zvezne funkcije ne moreš sploh vpisat v integral. Za negativno pa si bomo potem pogledali.}
-
-$ a $ imenujemo \emph{spodnja meja} integrala, $ b $ pa \emph{zgornja meja}.
+Pogoj: $ f (x) $ je zvezna in na $ [a, b] $ nenegativna \didopomba{Za zvezno lahko pokažeš, da odsekoma zvezne funkcije ne moreš sploh vpisat v integral. Za negativno pa si bomo potem pogledali.}. $ a $ imenujemo \emph{spodnja meja} integrala, $ b $ pa \emph{zgornja meja}.
 
 \didopomba{Poudari, da je dol. integral število (ne pa funkcija)! Zaenkrat ga še ne znamo izračunati, še pride}
 
@@ -49,12 +55,13 @@ $ a $ imenujemo \emph{spodnja meja} integrala, $ b $ pa \emph{zgornja meja}.
 
 Kaj pa, če je na $ [a, b] $ funkcija malo pozitivna, malo negativna?
 
+\newpage
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{slike/ploscine2.png}
 \end{figure}
 
-\newpage
 
 Kratka vaja \vaje{(npr. slikco s polinomom z znanimi ploščinami, računaš le po eno območje naenkrat, pač enkrat bo +, enkrat -)}:
 
@@ -74,7 +81,9 @@ Potem pa še nekaj logičnih lastnosti \didopomba{sledijo iz ploščine (lahko z
     \item $ \int_a^b c \cdot f(x) dx = c \cdot \int_a^b f(x) dx $
     \item $\int_a^b (f(x) + g(x)) dx = \int_a^b f(x) dx + \int_a^b g(x) dx $
     \item Izrek o povprečni vrednosti: $ \int_a^b f(x) dx = (b-a)p \rightarrow $: $ p = \frac{1}{b - a} \int_a^b f(x) dx $
-    
+
+\newpage
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{slike/povprecna_vrednost.png}
@@ -82,7 +91,6 @@ Potem pa še nekaj logičnih lastnosti \didopomba{sledijo iz ploščine (lahko z
 
 \end{itemize}
 
-\newpage
 
 \vaje{
 Vaje:
@@ -100,9 +108,7 @@ Zdaj pa nam že malo nagaja, ker ne znamo izračunati določenega integrala ...
 
 \naslov{Newton-Leibnizova formula}
 
-Da bomo lahko integral lahko tudi izračunali, si za začetek poglejmo funkcijo na sliki (levo). Funkcija $ P(x) $ pogleda območje med grafom $ f $ in $ x $-osjo na intervalu $ [ s, x] $ \didopomba{$ s $ je pač eno število, NI VAŽNO} in prišteje območje, kjer je $ f $ pozitivna, in odšteje območje, kjer je $ f $ negativna. Tako vidimo, da se $ P $ obnaša ravno tako kot integral:
-
-$$ P(x) = \int_s^x f(t) dt $$
+Da bomo lahko integral lahko tudi izračunali, si za začetek poglejmo funkcijo na sliki (levo).
 
 \begin{figure}[h]
     \centering
@@ -110,15 +116,19 @@ $$ P(x) = \int_s^x f(t) dt $$
     \includegraphics[width=0.45\textwidth]{slike/NL_P(b)-P(a).png}
 \end{figure}
 
-Izrazimo še (očitno sledi iz slike) $ \int_a^b f(x) dx = P(b) - P(a) $. Waw, to pa smo že bližje. Manjka nam samo še predpis za $ P $. Zato si \didopomba{hint} poglejmo njen odvod:
+\newpage
+
+Funkcija $ P(x) $ pogleda območje med grafom $ f $ in $ x $-osjo na intervalu $ [ s, x] $ \didopomba{$ s $ je pač eno število, NI VAŽNO} in prišteje območje, kjer je $ f $ pozitivna, in odšteje območje, kjer je $ f $ negativna. Tako vidimo, da se $ P $ obnaša ravno tako kot integral:
+
+$$ P(x) = \int_s^x f(t) dt $$
+
+Izrazimo še (očitno sledi iz slike (zgoraj desno)) $ \int_a^b f(x) dx = P(b) - P(a) $. Waw, to pa smo že bližje. Manjka nam samo še predpis za $ P $. Zato si \didopomba{hint} poglejmo njen odvod:
 
 $$
 P'(x) = \lim_{h \rightarrow 0} \frac{P(x + h) - P(x)}{h} = \lim_{h \rightarrow 0} \frac{f(x) \cdot h}{h} = f(x)
 $$
 
 Pri tem smo iz slike videli, kaj je $ P(x + h) - P(x) $ in ko gre $ h $ proti 0, je višina tega ``pravokotnika'' kar $ f(x) $.
-
-\newpage
 
 \begin{figure}[h]
     \centering
@@ -143,7 +153,15 @@ Vaje:
 \end{itemize}
 }
 
+\newpage
+
+\naslov{Per partes v nedoločenem integralu}
+
+A je to sploh noter? Sicer pa itak sam dodaš meje.
+
 \naslov{Uvedba nove spremenljivke}
+
+\textcolor{rdeca}{PAZI! Le če je nova spremenljivka monotona funckija, lahko to narediš !! (sicer se ti vmes integral malo odšteje/prišteje \ldots)}
 
 $ \int_1^3 (2x + 1)^5 dx $ lahko rešimo na dva načina:
 \begin{itemize}
