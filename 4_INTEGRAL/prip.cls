@@ -12,6 +12,8 @@
 \usepackage{color}
 \definecolor{rdeca}{rgb}{1,0,0} % values Red, Green, Blue
 \definecolor{modra}{rgb}{0,0,1} % values Red, Green, Blue
+\definecolor{zelena}{rgb}{0,1,0} % values Red, Green, Blue
+
 
 \pagestyle{empty}
 \setlength{\textwidth}{16 true cm}
