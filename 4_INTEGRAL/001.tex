@@ -32,19 +32,17 @@
 
 \emph{Nedoločen integral funkcije $ f(x) $ je funkcija, katere odvod je enak $ f(x) $.} Označimo jo z $ \int f(x) dx $.
 
-\begin{align*}
-    \int f(x) dx = & F(x) + c \\
-    & (F(x) + c)' = F'(x) = f(x)
-\end{align*}
+$$
+    \int f(x) dx = F(x) + c \Longleftrightarrow (F(x) + c)' = F'(x) = f(x)
+$$
 
 \didopomba{Napišemo zraven ob strani na enak način še en primer iz tabele:}
 
-\begin{align*}
-    \int (4x - 3) dx = & 2x^2 - 3x + c \\
-    & (2x^2 - 3x + c)' = 4x - 3
-\end{align*}
+$$
+    \int (4x - 3) dx = 2x^2 - 3x + c \Longleftrightarrow (2x^2 - 3x + c)' = 4x - 3
+$$
 
-\textcolor{rdeca}{Razlaga $ dx $:} Mogoče kar tako, da je to pač oznaka. Pred $ dx $ NI MNOŽENJA, ampak je to zraven. $ dx $ pove, po kateri spremenljivki integriramo (npr. če je v integralu več črk, vse razen $ x $ obravnavamo kot konstante). Ni treba preveč se trudit, pač ga bomo potrebovali kasneje (pri uvedbi nove spremenljivke in določenem integralu).
+\textcolor{rdeca}{Razlaga oznak $ \int $ in $ dx $:} Izhaja iz oznake pri določenem integralu, ki ga bomo spoznali kasneje. Zdaj se učimo nedoločen integral, s katerim bomo lahko računali določene. Oznaka $ dx $ pove, po kateri spremenljivki integriramo (npr. če je v integralu več črk, vse razen $ x $ obravnavamo kot konstante). Ni treba preveč se trudit, pač ga bomo potrebovali kasneje (pri uvedbi nove spremenljivke in določenem integralu).
 
 \naslov{Tabela integralov}
 
@@ -53,11 +51,20 @@
 \begin{itemize}
     \item $ \int k dx = kx + c $
     \item $ \int x^n dx = \frac{x^{n+1}}{n + 1} + c; n \ne -1 $
-    \item $ \int \frac{1}{x} dx = \ln |x| + c $
-    \item ...
+    \item $ \int \frac{1}{x} dx = \ln |x| + c $ \didopomba{od kje pride absolutna (TO POGLEJTE ŽE PRI ODVODIH!!!)? funkcijo $ \ln |x| $ se spozna (funkcijo $ \ln x $ se samo preslika še na desno stran), in jo lahko odvajamo na vsaki strani osi, v obeh primerih dobiš odvod enak $ 1/x $ ne glede na predznak $ x $.}
+    \item $ \int e^x dx = e^x + c $
+    \item $ \int a^x dx = \frac{a^x}{\ln a} + c $
+    \item $ \int \sin x dx = - \cos x + c $
+    \item $ \int \cos x dx = \sin x + c $
+    \item $ \int \frac{1}{\cos^2 x} dx = \tan x + c $
+    \item $ \int \frac{1}{\sin^2 x} dx = - \cot x + c $
+    \item $ \int \frac{1}{\sqrt{1-x^2}} dx = \arcsin x + c $
+    \item $ \int \frac{-1}{\sqrt{1-x^2}} dx = \arccos x + c $
+    \item $ \int \frac{1}{x^2 + 1} dx = \arctan x + c $
+
 \end{itemize}
 
-Opomba: $ \ln|x| $, od kje pride absolutna (TO POGLEJTE ŽE PRI ODVODIH!!!)? \textcolor{rdeca}{funkcijo $ \ln |x| $ se spozna (funkcijo $ \ln x $ se samo preslika še na desno stran), in jo lahko odvajamo na vsaki strani osi, v obeh primerih dobiš odvod enak $ 1/x $ ne glede na predznak $ x $.}
+
 
 \newpage
 

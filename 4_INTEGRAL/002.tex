@@ -18,24 +18,28 @@ Koliko je ploščina območja, ki ga funkcija $ f(x) = x - 1 $ na intervalu $ [2
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.3\textwidth]{slike/dol_int_motivacijski_primer2.png}
-    \includegraphics[width=0.3\textwidth]{slike/dol_int_motivacijski_primer3.png}
-    \includegraphics[width=0.3\textwidth]{slike/dol_int_motivacijski_primer4.png}    
+    \includegraphics[width=0.3\textwidth]{slike/midpoint.png}
+    \includegraphics[width=0.3\textwidth]{slike/midpoint2.png}    
 \end{figure}
 
 
-\didopomba{Naj sami predlagajo, da območje razdelimo na znane like, pravokotnike, recimo z enako širino -- ampak s kakšno višino? Ploščino lahko omejimo z zgornjo in spodnjo vsoto (razloži, kaj je to, čim manj oznak, le aplet glej!), in velja, da je ploščina območja vedno omejena od spodaj s spodnjo vsoto, od zgoraj pa z zgornjo vsoto. Če vzamemo vedno ožje pravokotnike, se vsoti z obeh strani približujeta ploščini.}
+\didopomba{Naj sami predlagajo, da območje razdelimo na znane like, pravokotnike, recimo z enako širino -- ampak s kakšno višino? \\
+Torej: Interval razdelimo na enako široke podintervale. Na vsakem pointervalu si izberemo točko, katere vrednost $ f $ bo višina pravokotnika na tem podintervalu. Lahko si izberejo levo/desno mejo podintervalov, ali točko, kjer $ f $ na podintervalu doseže maksimum/minimum, recimo da vzamemo kar točke na sredini podintervalov. \\
+Če vzamemo vedno ožje pravokotnike, se vsota ploščin pravokotnikov približuje iskani ploščini.}
 
-\didopomba{Zdaj pa rišemo v zvezek, kot kaže spodnja slika. Ploščino lahko zapišemo kot vsoto pravokotnikov s širino $ \Delta_i $ in višino $ f(x_i) $, kjer so $ x_i $ ``delilne točke'' intervala $ [a, b] $. Več je $ x_i $-jev, bolj bo ploščina pravokotnikov podobna pravi ploščini. V limiti iz vsote dobimo integral; integral je v bistvu ena vsota, kjer se pomikamo po res neskončno majhnih korakih.}
+\didopomba{Zdaj pa rišemo v zvezek, kot kaže tretja slika (splošna $ f $ na $ [a, b] $). Ploščino lahko zapišemo kot vsoto pravokotnikov s širino $ \Delta x $ in višino $ f(x_i) $, kjer so $ x_i $ sredinske točke $ i $-tega podintervala $ [a, b] $. Več je podintervalov, bolj bo ploščina pravokotnikov podobna pravi ploščini.}
 
 \newpage
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\textwidth]{slike/vsote.png}
-\end{figure}
+
+\didopomba{Limito vsote označimo z znakom $ \int $ (oznako je uvedel Leibniz); integral je v bistvu ena vsota, kjer se pomikamo po res neskončno majhnih korakih. Pri tem se $ \Delta x $ zamenja z $ dx $, s čimer poudarimo, da gredo širine podintervalov proti 0.}
 
 $$
-S = \lim_{n \rightarrow \infty} \sum_{x_i} f(x_i) \cdot \Delta_i = \int_a^b f(x) dx
+S = \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i) \cdot \Delta x = \int_a^b f(x) dx
 $$
+
+$ a $ imenujemo \emph{spodnja meja} integrala, $ b $ pa \emph{zgornja meja}.
+
+\didopomba{Od tu pride oznaka $ \int dx $ pri nedoločenih integralih, ne pa obratno ...}
 
 \textcolor{rdeca}{Določeni integral $ \int_a^b f(x) dx $ je enak ploščini lika, ki je omejen z grafom funkcije $ f $, $ x $-osjo ter premicama $ x = a $ in $ x = b $.}
 
@@ -44,7 +48,7 @@ $$
     \includegraphics[width=0.4\textwidth]{slike/dol_int_skica.png}
 \end{figure}
 
-Pogoj: $ f (x) $ je zvezna in na $ [a, b] $ nenegativna \didopomba{Za zvezno lahko pokažeš, da odsekoma zvezne funkcije ne moreš sploh vpisat v integral. Za negativno pa si bomo potem pogledali.}. $ a $ imenujemo \emph{spodnja meja} integrala, $ b $ pa \emph{zgornja meja}.
+Pogoj: $ f (x) $ je zvezna in na $ [a, b] $ nenegativna \didopomba{Za zvezno lahko pokažeš, da odsekoma zvezne funkcije ne moreš sploh vpisat v integral. Za negativno pa upoštevaš, da je $ f(x_i) < 0 $, torej je vsota in s tem integral negativen. Ploščina pa je po velikosti enaka (spodnja slika)}.
 
 \didopomba{Poudari, da je dol. integral število (ne pa funkcija)! Zaenkrat ga še ne znamo izračunati, še pride}
 
@@ -62,6 +66,7 @@ Kaj pa, če je na $ [a, b] $ funkcija malo pozitivna, malo negativna?
     \includegraphics[width=0.5\textwidth]{slike/ploscine2.png}
 \end{figure}
 
+Ploščina območja je tako vedno enaka $ S = \int_a^b | f(x) | dx $ ne glede na predznak $ f $.
 
 Kratka vaja \vaje{(npr. slikco s polinomom z znanimi ploščinami, računaš le po eno območje naenkrat, pač enkrat bo +, enkrat -)}:
 
@@ -74,10 +79,12 @@ Potem pa še nekaj logičnih lastnosti \didopomba{sledijo iz ploščine (lahko z
 
 \naslov{Lastnosti}
 
+\didopomba{Lahko si zraven slikco narišeš}
+
 \begin{itemize}
     \item $ \int_a^a f(x) dx = 0 $
     \item $ \int_a^c f(x) dx + \int_c^b f(x) dx = \int_a^b f(x) dx $, kjer je $ c \in [a, b] $
-    \item $ \int_a^b f(x) dx = - \int_b^a f(x) dx $ \didopomba{To je bolj dogovor ...}
+    \item $ \int_a^b f(x) dx = - \int_b^a f(x) dx $ \didopomba{To je bolj dogovor, ampak bo pa očitno sledilo iz NL formule}
     \item $ \int_a^b c \cdot f(x) dx = c \cdot \int_a^b f(x) dx $
     \item $\int_a^b (f(x) + g(x)) dx = \int_a^b f(x) dx + \int_a^b g(x) dx $
     \item Izrek o povprečni vrednosti: $ \int_a^b f(x) dx = (b-a)p \rightarrow $: $ p = \frac{1}{b - a} \int_a^b f(x) dx $
@@ -104,7 +111,7 @@ Vaje:
 \end{itemize}
 }
  
-Zdaj pa nam že malo nagaja, ker ne znamo izračunati določenega integrala ...
+Zdaj pa nam že malo nagaja, ker ne znamo izračunati določenega integrala, drugega primera ($ f(x) = \sin{2x}+\frac{x^2}{10} + 1 $) ne znamo izračunati ...
 
 \naslov{Newton-Leibnizova formula}
 
@@ -138,11 +145,13 @@ Pri tem smo iz slike videli, kaj je $ P(x + h) - P(x) $ in ko gre $ h $ proti 0,
 
 Že vemo, da $ P'(x) = f(x) $ pomeni, da je $ P(x) $ nedoločen integral funkcije $ f $ ($ \int f(x) dx = P(x) + c $), torej $ P $ dejansko že znamo določiti!
 
-Povzemimo: če \textcolor{zelena}{$ \int f(x) dx = F(x) + c $}, potem je \textcolor{rdeca}{$\int_a^b f(x) dx = F(x)|_a^b = F(b) - F(a) $} \didopomba{Oznako s $ | $ napiši nazadnje, pač to je krajši zapis. Tu ni več c-jev!} Newton-Leibnizova formula (NL-formula).
+Povzemimo: če \textcolor{rdeca}{$ \int f(x) dx = F(x) + c $}, potem je \textcolor{rdeca}{$\int_a^b f(x) dx = F(x)|_a^b = F(b) - F(a) $} \didopomba{Oznako s $ | $ napiši nazadnje, pač to je krajši zapis. Tu ni več c-jev!} Newton-Leibnizova formula (NL-formula).
 
 Z besedo: Določen integral funkcije je enak razliki vrednosti njenega nedoločenega integrala na zgornji in spodnji meji.
 
 Izračunamo prav ta prvi primer pri določenem integralom še s to formulo: $ \int_2^4 (x - 1) dx = (\frac{x^2}{2} - x) |_2^4 = 4 $.
+
+Pa še drugega: $ \int_1^5 (\sin{2x}+\frac{x^2}{10} + 1) dx = \ldots \approx 8,14 $
 
 \vaje{
 Vaje:
