@@ -2,17 +2,17 @@
 %tukaj zaporedoma napisemo{st. zaporedne ure}{datum}{naslov}{poglavje}{oblika dela}{pripomocki}
 \begin{priprava}{}{}{Zaporedja}{Geometrijsko zaporedje}{frontalna}{tabla}
 
-\didopomba{Na enak način kot aritmetično zaporedje} Kaj je skupno naslednjim zaporedjem (konstanten količnik \didopomba{splošni člen poračunate potem, razen če ga kdo sam ugane}):
+\didopomba{Na enak način kot aritmetično zaporedje} Kaj je skupno naslednjim zaporedjem (konstanten količnik \didopomba{splošni člen poračunate potem pri vajah, razen če ga kdo sam ugane}):
 \begin{align*}
-    & 2, 6, 18, 54, \ldots && a_n = 2n+1 && d = 2 \\
+    & 2, 6, 18, 54 \ldots && a_n = 2n+1 && d = 2 \\
     & -4, 8, -16, 32,  \ldots && a_n = -3n+11 && d = -3 \\
-    & 8, 4, 2, 1, \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \ldots && a_n = 5 && d = 0
+    & 8, 4, 2, 1, \frac{1}{2}, \frac{1}{4}, \frac{1}{8} \ldots && a_n = 5 && d = 0
 \end{align*}
 
 Zaporedje je \emph{geometrijsko}, kadar je količnik med zaporednimi členi konstanten.
 $$ \frac{a_n}{a_{n-1}} = q \text{ za vsak } n \in \NN $$
 
-Za splošno zaporedje $ a_1, a_2, a_3, a_4, \ldots, a_n, \ldots $ lahko zapišemo splošni člen:
+Za splošno zaporedje $ a_1, a_2, a_3, a_4 \ldots, a_n \ldots $ lahko zapišemo splošni člen:
 \begin{align*}
     & a_1 \\
     & a_2 = a_1 \cdot q \\
@@ -22,25 +22,28 @@ Za splošno zaporedje $ a_1, a_2, a_3, a_4, \ldots, a_n, \ldots $ lahko zapišem
     & \bf{a_n = a_1 \cdot q^{n-1}}
 \end{align*}
 
-\didopomba{Tu naj primere predlagajo sami}
-RAJE V TABELI!
+Kaj nam $ q $ pove? \didopomba{Tu naj primere predlagajo sami}
 
-\begin{itemize}
-    \item $ a_1 > 0 $:
-        \subitem $ q > 1 \rightarrow $ naraščajoče (npr. $ 2, 6, 18, 54, \ldots $)
-        \subitem $ 0 < q < 1 \rightarrow $ padajoče (npr. $ 1, \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \ldots $)
-    \item $ a_1 < 0 $:
-        \subitem $ q > 1 \rightarrow $ padajoče (npr. $ -2, -6, -18, -54, \ldots $)
-        \subitem $ 0 < q < 1 \rightarrow $ naraščajoče (npr. $ -1, -\frac{1}{2}, -\frac{1}{4}, -\frac{1}{8}, \ldots $)
-    \item $ q < 0 $: alternijajoče/spreminjajoče (npr. $ -4, 8, -16, 32,  \ldots $)
-\end{itemize}
+\begin{center}
+    \begin{tabular}{ |c|c|c| } 
+     \hline
+     & $ a_1 > 0 $ & $ a_1 < 0 $ \\
+     \hline
+     $ q > 1 $ & naraščajoče (npr. $ 2, 6, 18, 54 \ldots $) & padajoče (npr. $ -2, -6, -18, -54 \ldots $) \\
+     \hline 
+     $ 0 < q < 1 $ & padajoče (npr. $ 1, \frac{1}{2}, \frac{1}{4}, \frac{1}{8} \ldots $) & naraščajoče (npr. $ -1, -\frac{1}{2}, -\frac{1}{4}, -\frac{1}{8} \ldots $) \\ 
+     \hline
+     $ q < 0 $ & \multicolumn{2}{|c|}{alternijajoče/spreminjajoče (npr. $ -4, 8, -16, 32,  \ldots $)} \\
+     \hline
+    \end{tabular}
+    \end{center}
 
 \newpage
 
 \vaje{
 Vaja:
 \begin{itemize}
-    \item Izračunamo splošni člen s to formulo za zgornje tri primere. Ali so zaporedja naraščajoča, padajoča, \ldots?
+    \item Izračunamo splošni člen s to formulo za zgornje tri primere. Ali so zaporedja naraščajoča, padajoča \ldots?
     \item Iz zaporedja splošni člen in $ q $ \didopomba{Life hack: $ a_1, a_2, a_3 $ zaporedni členi geometrijskega zaporedja: namesto $ a_1, a_2 = a_1q, a_3 = a_1q^2 $ gledaš $ a_1 = \frac{a_2}{q}, a_2, a_3 = a_2q $.}
     \item Iz splošnega člena prvih nekaj členov in $(2n+1)$-ti člen ali kaj podobnega
     \item Naj bodo $ a, x, b $ zaporedni členi geometrijskega zaporedja. Koliko je $ x $?

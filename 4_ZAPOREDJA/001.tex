@@ -37,17 +37,20 @@ $$ f: \NN \rightarrow \RR $$}
 
 Pišemo lahko kar \textbf{$ f(n) = a_n $}.
 
-\didopomba{Seveda lahko slikamo tudi v $ \CC $, ampak potem se nam zatakne pri lastnostih zaporedij in nimamo veliko za početi z njimi. Vedno začnemo z 1 (lahko bi tudi z 0, se vse le zamakne).}
+\didopomba{Seveda lahko slikamo tudi v $ \CC $, ampak potem se nam zatakne pri lastnostih zaporedij in nimamo veliko za početi z njimi. Člene začnemo oštevilčevati z 1 (lahko bi tudi z 0, se vse le zamakne).}
 
 \newpage
 
 \naslov{Predstavitve zaporedij}
 \begin{itemize}
-    \item Zapišemo njegove člene: $ 0, 2, 4, 6, 8 \ldots $ \didopomba{Tu je nevarnost treh pikic, ni nujno enoličnega nadaljevanja zaporedja: npr. $ 2, 4 \ldots $ se lahko nadaljuje s $ 8, 16 \ldots $ (potencami $ 2 $), lahko pa s $ 6, 8, 10 \ldots $}
+    \item Zapišemo njegove člene: $ 0, 2, 4, 6, 8 \ldots $ \didopomba{Tu je nevarnost treh pikic, ni nujno enoličnega nadaljevanja zaporedja: zaporedje $ 2, 4 \ldots $ se lahko nadaljuje s $ 8, 16 \ldots $ (potencami $ 2 $) ali s $ 6, 8, 10 \ldots $ (poštevanko števila 2), lahko pa prav naključno s $ 3, -7, 48 \ldots $}
     \item S predpisom zaporedja (s splošnim členom): $ a_n = 2 (n - 1) = 2n - 2 $
     \item Z grafičnim prikazom:
-    SLIKA
-    \item Z rekurzivnim zapisom (s prejšnjimi členi): $ a_n = a_{n-1} + 2, a_1 = 0 $ \didopomba{ne bo šlo pri vseh zaporedjih}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.5\textwidth]{slike/2n-2.png}
+        \end{figure}
+    \item Z rekurzivnim zapisom (s prejšnjimi členi): $ a_n = a_{n-1} + 2, a_1 = 0 $ (začetni pogoj) \didopomba{ne bo šlo pri vseh zaporedjih}
 \end{itemize}
 
 \vaje{
