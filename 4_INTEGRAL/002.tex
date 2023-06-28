@@ -13,7 +13,7 @@ Koliko je ploščina območja, ki ga funkcija $ f(x) = x - 1 $ na intervalu $ [2
     \includegraphics[width=0.4\textwidth]{slike/dol_int_motivacijski_primer.png}
 \end{figure}
 
-\didopomba{Zdaj pa si pogledamo aplet na Geogebri (https://www.geogebra.org/m/Fv6t696j), v zvezek si bomo risali potem. Vzamemo drugačno funkcijo: $ f(x) = \sin{2x}+\frac{x^2}{10} + 1 $ na intervalu $ [1,5] $. Kako bi izračunali ploščino pod grafom?}
+\didopomba{Zdaj pa si pogledamo \href{https://www.geogebra.org/m/Fv6t696j}{aplet na Geogebri}, v zvezek si bomo risali potem.} Vzamemo drugačno funkcijo: $ f(x) = \sin{2x}+\frac{x^2}{10} + 1 $ na intervalu $ [1,5] $. Kako bi izračunali ploščino pod grafom?
 
 \begin{figure}[h]
     \centering
@@ -23,43 +23,54 @@ Koliko je ploščina območja, ki ga funkcija $ f(x) = x - 1 $ na intervalu $ [2
 \end{figure}
 
 
-\didopomba{Naj sami predlagajo, da območje razdelimo na znane like, pravokotnike, recimo z enako širino -- ampak s kakšno višino? \\
-Torej: Interval razdelimo na enako široke podintervale. Na vsakem pointervalu si izberemo točko, katere vrednost $ f $ bo višina pravokotnika na tem podintervalu. Lahko si izberejo levo/desno mejo podintervalov, ali točko, kjer $ f $ na podintervalu doseže maksimum/minimum, recimo da vzamemo kar točke na sredini podintervalov. \\
-Če vzamemo vedno ožje pravokotnike, se vsota ploščin pravokotnikov približuje iskani ploščini.}
+\didopomba{Naj sami predlagajo, da območje razdelimo na znane like, pravokotnike, recimo z enako širino -- ampak s kakšno višino?}
 
-\didopomba{Zdaj pa rišemo v zvezek, kot kaže tretja slika (splošna $ f $ na $ [a, b] $). Ploščino lahko zapišemo kot vsoto pravokotnikov s širino $ \Delta x $ in višino $ f(x_i) $, kjer so $ x_i $ sredinske točke $ i $-tega podintervala $ [a, b] $. Več je podintervalov, bolj bo ploščina pravokotnikov podobna pravi ploščini.}
+\didopomba{Interval razdelimo na enako široke podintervale. Na vsakem pointervalu si izberemo točko, in vrednost funkcije $ f $ v tej točki bo višina pravokotnika na tem podintervalu. Lahko si izberejo levo/desno mejo podintervalov, ali točko, kjer $ f $ na podintervalu doseže maksimum/minimum, recimo da mi vzamemo kar točke na sredini podintervalov.}
+
+\didopomba{Iz animacije vidimo: če interval razdelimo na večdno več delov, se pravokotniki ožajo in se njihova vsota ploščin približuje iskani ploščini.}
+
+\didopomba{Zdaj pa pišemo/rišemo v zvezek (splošna $ f $ na $ [a, b] $).}
 
 \newpage
 
-\didopomba{Limito vsote označimo z znakom $ \int $ (oznako je uvedel Leibniz); integral je v bistvu ena vsota, kjer se pomikamo po res neskončno majhnih korakih. Pri tem se $ \Delta x $ zamenja z $ dx $, s čimer poudarimo, da gredo širine podintervalov proti 0.}
+Ploščino lahko zapišemo kot vsoto ploščin $ n $ pravokotnikov s širino $ \Delta x $ in višino $ f(x_i) $, kjer so $ x_i $ sredinske točke $ i $-tega podintervala $ [a, b] $ \didopomba{izkaže se, da so to lahko katerekoli točke iz intervala}.
+
+$$ S_n = \sum_{i=1}^n f(x_i) \cdot \Delta x \text{ \didopomba{to je vijola ploščina}}$$
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\textwidth]{slike/dol_int_skica0.png}
+\end{figure}
+
+Več je podintervalov, bolj se vsota ploščin pravokotnikov približuje pravi ploščini \didopomba{torej bo govora o limiti}.
+
+\didopomba{Limito te vsote označimo z znakom $ \int $ (oznako je uvedel Leibniz); integral je v bistvu ena vsota, kjer se pomikamo po res neskončno majhnih korakih. Pri tem se $ \Delta x $ zamenja z $ dx $, s čimer poudarimo, da gredo širine podintervalov res proti 0.}
 
 $$
 S = \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i) \cdot \Delta x = \int_a^b f(x) dx
 $$
 
-$ a $ imenujemo \emph{spodnja meja} integrala, $ b $ pa \emph{zgornja meja}.
+$ a $ imenujemo \textbf{spodnja meja} integrala, $ b $ pa \textbf{zgornja meja}.
 
-\didopomba{Od tu pride oznaka $ \int dx $ pri nedoločenih integralih, ne pa obratno ...}
+\didopomba{Od \underline{tu} pride oznaka $ \int dx $ pri nedoločenih integralih, ne pa obratno. Zakaj pa smo se učili nedoločene integrale, pa še pridemo do tega ... Poudari, da je dol. integral število (ne pa funkcija)! Zaenkrat ga še ne znamo izračunati, še pride.}
 
-\textcolor{rdeca}{Določeni integral $ \int_a^b f(x) dx $ je enak ploščini lika, ki je omejen z grafom funkcije $ f $, $ x $-osjo ter premicama $ x = a $ in $ x = b $.}
+Če je $ f (x) $ na $ [a, b] $ zvezna in nenegativna, je \textbf{Določeni integral $ \int_a^b f(x) dx $ enak ploščini lika, ki je omejen z grafom funkcije $ f $, $ x $-osjo ter premicama $ x = a $ in $ x = b $.}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{slike/dol_int_skica.png}
 \end{figure}
 
-Pogoj: $ f (x) $ je zvezna in na $ [a, b] $ nenegativna \didopomba{Za zvezno lahko pokažeš, da odsekoma zvezne funkcije ne moreš sploh vpisat v integral. Za negativno pa upoštevaš, da je $ f(x_i) < 0 $, torej je vsota in s tem integral negativen. Ploščina pa je po velikosti enaka (spodnja slika)}.
+\newpage
 
-\didopomba{Poudari, da je dol. integral število (ne pa funkcija)! Zaenkrat ga še ne znamo izračunati, še pride}
+\didopomba{Za zvezno lahko pokažeš, da odsekoma zvezne funkcije ne moreš sploh vpisat v integral. Za negativno pa upoštevaš, da je $ f(x_i) < 0 $, torej je vsota $ \sum f(x_i) \Delta x $ negativna in s tem tudi  integral negativen. Ploščina pa je po velikosti seveda enaka (spodnja slika)}.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{slike/ploscine.png}
+    \includegraphics[width=0.6\textwidth]{slike/ploscine.png}
 \end{figure}
 
 Kaj pa, če je na $ [a, b] $ funkcija malo pozitivna, malo negativna?
-
-\newpage
 
 \begin{figure}[h]
     \centering
@@ -68,18 +79,18 @@ Kaj pa, če je na $ [a, b] $ funkcija malo pozitivna, malo negativna?
 
 Ploščina območja je tako vedno enaka $ S = \int_a^b | f(x) | dx $ ne glede na predznak $ f $.
 
-Kratka vaja \vaje{(npr. slikco s polinomom z znanimi ploščinami, računaš le po eno območje naenkrat, pač enkrat bo +, enkrat -)}:
+\vaje{Kratka vaja (npr. slikco s polinomom z znanimi ploščinami, zaenkrat računaš le po eno območje naenkrat, pač enkrat bo +, enkrat -)}:
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{slike/dol_vaje1.png}
 \end{figure}
 
+\newpage
+
 Potem pa še nekaj logičnih lastnosti \didopomba{sledijo iz ploščine (lahko zraven skice), se jih tudi preveri, ko spoznajo N-L formulo}:
 
 \naslov{Lastnosti}
-
-\didopomba{Lahko si zraven slikco narišeš}
 
 \begin{itemize}
     \item $ \int_a^a f(x) dx = 0 $
@@ -88,66 +99,77 @@ Potem pa še nekaj logičnih lastnosti \didopomba{sledijo iz ploščine (lahko z
     \item $ \int_a^b c \cdot f(x) dx = c \cdot \int_a^b f(x) dx $
     \item $\int_a^b (f(x) + g(x)) dx = \int_a^b f(x) dx + \int_a^b g(x) dx $
     \item Izrek o povprečni vrednosti: $ \int_a^b f(x) dx = (b-a)p \rightarrow $: $ p = \frac{1}{b - a} \int_a^b f(x) dx $
-
-\newpage
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\textwidth]{slike/povprecna_vrednost.png}
-\end{figure}
-
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.4\textwidth]{slike/povprecna_vrednost.png}
+        \end{figure}
 \end{itemize}
-
 
 \vaje{
 Vaje:
 \begin{itemize}
-    \item Lahko naloge - funckije z znano ploščino (jo znaš razbrati iz grafa, kakšne premice, absolutno, krožnice ...), najprej na enem območju, pozitivno/negativno, nato malo pozitivno in malo negativno
-    \item funkcije, kjer se ploščine odštejejo v 0 (npr. lihe funkcije, $ \int_0^{2\pi} \sin x dx $)
+    \item Lahko naloge -- funckije z znano ploščino (jo znaš razbrati iz grafa, kakšne premice, absolutno, krožnice ...), najprej na enem območju, pozitivno/negativno, nato oboje ipd.
+    \item funkcije,, ki se ne da enostavno ploščine izraziti, ampak se ploščine odštejejo v 0 (npr. lihe funkcije, $ \int_0^{2\pi} \sin x dx $)
     \item sode funkcije na simetričnem intervalu $ [-a, a] $ -- lahko integriraš po $ [0, a] $ in podvojiš! (včasih je to enostavneje, saj vstavljaš v eno mejo 0).
     \subitem tudi $ \int_{-\pi/2}^{pi/2} \cos x dx $ je vredu primer, pač se da poenostavit v $ \int_0^{\pi/2} \cos x dx $.
     \item valovita funkcija z odsekoma znanimi ploščinami (ampak neznanim predpisom) in morajo izračunati določeni integral na različnih intervalih, pa $ 2f(x), -f(x), |f(x)| $ ipd.
-    \item Oceni ploščino funkcije (npr. na [0, 2], min = 1 in max = 2 -> ploščina je med 2 in 4. Nato jo še izračunamo.) ALI npr. Za integral $ \int_e^{e^2} \ln x dx $ ugotovi, ali je večji od 2, ali je večji od 30. \didopomba{Naj sami razmislijo, kako se tega lotiti.}
+    \item Oceni ploščino funkcije (npr. na [0, 2], min = 1 in max = 2 -> ploščina je med 2 in 4. Nato jo še izračunamo.)
 \end{itemize}
 }
- 
-Zdaj pa nam že malo nagaja, ker ne znamo izračunati določenega integrala, drugega primera ($ f(x) = \sin{2x}+\frac{x^2}{10} + 1 $) ne znamo izračunati ...
+
+\newpage
+
+Zdaj pa nam že malo nagaja, ker ne znamo izračunati določenega integrala, npr. drugega primera ($ f(x) = \sin{2x}+\frac{x^2}{10} + 1 $) ne znamo izračunati ...
 
 \naslov{Newton-Leibnizova formula}
 
-Da bomo lahko integral lahko tudi izračunali, si za začetek poglejmo funkcijo na sliki (levo).
+Da bomo lahko integral lahko tudi izračunali, si za začetek poglejmo funkcijo na sliki (levo) \didopomba{čim manj piši, lahko le s puščicami povežeš slikce in formule}, ki jo definiramo s \didopomba{$ s < a $ ni važen}:
+
+$$ F(x) = \int_s^x f(t) dt $$
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.45\textwidth]{slike/NL_P(x).png}
+    \includegraphics[width=0.45\textwidth]{slike/NL_P(a).png}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{slike/NL_P(b).png}
     \includegraphics[width=0.45\textwidth]{slike/NL_P(b)-P(a).png}
 \end{figure}
 
-\newpage
+Iz slik opazimo, da velja
 
-Funkcija $ P(x) $ pogleda območje med grafom $ f $ in $ x $-osjo na intervalu $ [ s, x] $ \didopomba{$ s $ je pač eno število, NI VAŽNO} in prišteje območje, kjer je $ f $ pozitivna, in odšteje območje, kjer je $ f $ negativna. Tako vidimo, da se $ P $ obnaša ravno tako kot integral:
+$$ \int_a^b f(x) dx = F(b) - F(a) $$
 
-$$ P(x) = \int_s^x f(t) dt $$
-
-Izrazimo še (očitno sledi iz slike (zgoraj desno)) $ \int_a^b f(x) dx = P(b) - P(a) $. Waw, to pa smo že bližje. Manjka nam samo še predpis za $ P $. Zato si \didopomba{hint} poglejmo njen odvod:
+Super, kako pa izračunamo F? Poglejmo si njen odvod po definiciji \didopomba{pomoč s spodnjo slikco, višina tega ``pravokotnika'' je v limiti kar $ f(x) $}:
 
 $$
-P'(x) = \lim_{h \rightarrow 0} \frac{P(x + h) - P(x)}{h} = \lim_{h \rightarrow 0} \frac{f(x) \cdot h}{h} = f(x)
+F'(x) = \lim_{h \rightarrow 0} \frac{F(x + h) - F(x)}{h} = \lim_{h \rightarrow 0} \frac{f(x) \cdot h}{h} = f(x)
 $$
-
-Pri tem smo iz slike videli, kaj je $ P(x + h) - P(x) $ in ko gre $ h $ proti 0, je višina tega ``pravokotnika'' kar $ f(x) $.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{slike/NL_P(x)_P(x+h).png}
 \end{figure}
 
+\newpage
 
-Že vemo, da $ P'(x) = f(x) $ pomeni, da je $ P(x) $ nedoločen integral funkcije $ f $ ($ \int f(x) dx = P(x) + c $), torej $ P $ dejansko že znamo določiti!
+Že vemo, da $ F'(x) = f(x) $ pomeni, da je $ F(x) $ nedoločen integral funkcije $ f $ \didopomba{torej že znamo izračunati $ F $} in to je to.
 
-Povzemimo: če \textcolor{rdeca}{$ \int f(x) dx = F(x) + c $}, potem je \textcolor{rdeca}{$\int_a^b f(x) dx = F(x)|_a^b = F(b) - F(a) $} \didopomba{Oznako s $ | $ napiši nazadnje, pač to je krajši zapis. Tu ni več c-jev!} Newton-Leibnizova formula (NL-formula).
 
-Z besedo: Določen integral funkcije je enak razliki vrednosti njenega nedoločenega integrala na zgornji in spodnji meji.
+Povzemimo: če je funkcija $ F(x) $ nedoločen integral funkcije $ f(x) $, potem velja:
+
+\begin{align*}
+    \int f(x) dx & = F(x) + c \text{ \didopomba{to že vemo}} \\
+    \textcolor{rdeca}{\int_a^b f(x) dx} & = \textcolor{modra}{F(x)|_a^b} \textcolor{rdeca}{= F(b) - F(a)} \\
+    \text{ \textbf{Newton}} & \text{\textbf{-Leibnizova formula (NL-formula).}}
+\end{align*}
+
+\didopomba{Oznako s $ | $ napiši nazadnje, pač to je krajši zapis. Tu ni več c-jev, ker se odštejejo!}
+
+Z besedo: \emph{Določen integral funkcije je enak razliki vrednosti njenega nedoločenega integrala na zgornji in spodnji meji.}
 
 Izračunamo prav ta prvi primer pri določenem integralom še s to formulo: $ \int_2^4 (x - 1) dx = (\frac{x^2}{2} - x) |_2^4 = 4 $.
 
@@ -159,10 +181,9 @@ Vaje:
     \item Z N-L formulo preveri veljavnost pravil, ki smo jih našteli zgoraj \didopomba{razen povprečne vrednosti}
     \item basic vaje
     \item odsekoma zvezna funkcija \didopomba{Sami pogruntajo, da morajo ločiti na vsoto več integralov}
+    \item Za integral $ \int_e^{e^2} \ln x dx $ ugotovi, ali je večji od 2, ali je večji od 30. \didopomba{Naj sami razmislijo, kako se tega lotiti.}
 \end{itemize}
 }
-
-\newpage
 
 \naslov{Per partes v nedoločenem integralu}
 
