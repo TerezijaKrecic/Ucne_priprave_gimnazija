@@ -7,6 +7,7 @@
 \usepackage[slovene]{babel}
 \usepackage[OT2,T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{hyperref} % \href{tvoj link}{nadomestno besedilo}
 
 \usepackage[dvipsnames]{xcolor} % ime barv: https://www.overleaf.com/learn/latex/Using_colours_in_LaTeX
 \usepackage{color}
