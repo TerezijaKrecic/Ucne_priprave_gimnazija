@@ -1,0 +1,24 @@
+%priprava posamezne ure
+%tukaj zaporedoma napisemo{st. zaporedne ure}{datum}{naslov}{poglavje}{oblika dela}{pripomocki}
+\begin{priprava}{}{}{Kombinatorika}{Variacije}{frontalna}{tabla}
+
+Uvodna motivacija: V vrečki imamo 5 žog različnih barv. Trikrat zapored izvečemo žogo iz vrečke in jo postavimo v vrsto. Koliko barvnih vzorcev lahko dobimo? \didopomba{Za prvo mesto je 5 možnosti, za drugo 4 ter za tretje 3, torej $ 5 \cdot 4 \cdot 3  = $ (NAMIG) $ = \frac{5!}{2!} = \frac{5!}{(5-2)!} $}
+
+\textcolor{red}{\textbf{Variacija reda $ r $ med $ n $ elementi} = razporeditev $ n $ različnih elementov na $ r $ mest, kjer je $ r < n $.}
+Število teh razporeditev običajno označimo z $ V^r_n $.
+$$ V^r_n = \frac{n!}{(n - r)!} = n \cdot (n - 1) \cdot (n - 2) \cdot \ldots \cdot (n - r + 1) $$
+
+\textcolor{red}{\textbf{Variacija s ponavljanjem}} = razporeditev, kjer se elementi lahko ponavljajo.
+
+Vzamemo vrečko z žogami iz prve naloge in trikrat izvlečemo žogo, ampak jo takoj nato vrnemo. Koliko vzorcev lahko dobimo? \didopomba{Za prvo mesto je 5 možnosti, za drugo tudi 5 (ker smo prvo žogo vrnili) in za tretje spet 5, skupaj $ 5 \cdot 5 \cdot 5 = 5^3 \rightarrow $ naj sklepajo na formulo}
+$$ ^{(p)}V^r_n = n^r $$
+
+
+\vaje{
+Vaje:
+\begin{itemize}
+    \item vsega sorte
+\end{itemize}
+}
+    
+\end{priprava}

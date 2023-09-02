@@ -1,0 +1,29 @@
+%priprava posamezne ure
+%tukaj zaporedoma napisemo{st. zaporedne ure}{datum}{naslov}{poglavje}{oblika dela}{pripomocki}
+\begin{priprava}{}{}{Verjetnostni račun}{Bernoullijevo zaporedje}{frontalna}{tabla}
+
+Sedemkrat zapored mečemo kocko. Kolikšna je verjetnost, da pade ena šestica? Kaj pa dve, tri, štiri, pet, šest ali sedem šestic?
+
+\didopomba{verjetnost računamo tako, da si predstavljamo zaporedje poskusov kot vrsto črtic, kjer zbiramo mesta za šestico. Očitno so dogodki neodvisni, ker vsakič znova mečemo in prejšnji meti ne vplivajo na naslednjega}
+
+$ P(\text{št. šestic} = 1) = 7 \cdot \frac{1}{6} \cdot \left( \frac{5}{6} \right)^6 \doteq 0{,}279 $
+
+$ P(\text{št. šestic} = 1) = \binom 7 2 \cdot \left( \frac{1}{6} \right)^2 \cdot \left( \frac{5}{6} \right)^5 \doteq 0{,}234 $
+
+\ldots
+
+Kaj pa če vržemo kocko $ n $-krat in iščemo verjetnost, da šestica pade $ k $-krat?
+
+$ P(X = k) = \binom n k \cdot \left( \frac{1}{6} \right)^k \cdot \left( \frac{5}{6} \right)^{n-k} $
+
+\textbf{Bernoullijevo zaporedje} je zaporedje neodvisnih dogodkov, ki se lahko vsi zgodijo z verjetnostjo $ p $ (nasprotni dogodet torej z verjetnostjo $ (1 - p) $). Verjetnost, da se v $ n $ ponovitvah dogodek zgodi natanko $ k $-krat, izračunamo:
+$$ P_n(k) = \binom n k p^k (1 - p)^{n - k} $$
+
+\vaje{
+Vaje:
+\begin{itemize}
+    \item 
+\end{itemize}
+}
+    
+\end{priprava}

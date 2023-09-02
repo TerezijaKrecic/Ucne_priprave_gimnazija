@@ -1,0 +1,41 @@
+%priprava posamezne ure
+%tukaj zaporedoma napisemo{st. zaporedne ure}{datum}{naslov}{poglavje}{oblika dela}{pripomocki}
+\begin{priprava}{}{}{Verjetnostni račun}{Odvisnost in pogojna verjetnost}{frontalna}{tabla}
+
+\textbf{Odvisni in neodvisni dogodki:}
+
+\didopomba{V prejšnjem poglavju smo računali verjetnosti posameznih dogodkov in njihovih unij. Ali imamo formulo za $ P(A \cap B) $? Mogoče bojo intuitivno predlagali $ P(A \cap B) = P(A) \cdot P(B)$, zato si pogledamo primer.}
+
+Primer: V škatlli imamo oštevilčene listke od 1 do 10. Na slepo izberemo en listek. Računamo verjetnost, da je na izbranem listku liho število, deljivo s 3.
+
+Imamo presek dveh dogodkov:
+\begin{itemize}
+    \item $ A $: izvlečemo liho število
+    \item $ B $: izvlečemo število, deljivo s 3
+\end{itemize}
+Koliko je $ P(A \cap B) $? Uspeli izidi: $ \{ 3, 9 \} $, zato je odgovor $ \frac{2}{10} = \frac{1}{5}$.
+
+Koliko pa je verjetnost posameznega dogodka? $ P(A \cap B) = \frac{1}{5} \ne P(A) \cdot P(B) = \frac{3}{20} $
+
+\didopomba{Kaj je tukaj catch? Dogodek $ B $ je odvisen od dogodka $ A $, kajti če je npr. izvlečeno liho število, ki ni deljivo s tri, npr. 5, se dogodek $ B $ ne more zgoditi.}
+
+\textcolor{red}{Dogodka $ A $ in $ B $ sta \textbf{neodvisna}}, če velja $ P(A \cap B) = P(A) \cdot P(B) $. Če sta \textbf{odvisna}, velja \didopomba{Verjetnost, da se zgodi $ B $, če se zgodi  $ A $ je: ugodni izidi so, ko se zgodita oba hkrati (zato presek), vsi izidi pa, ko se zgodi $ A $}\\
+$ P(B|A) = \frac{P(A \cap B)}{P(A)} \rightarrow P(A \cap B) = P(A) \cdot P(B|A) $ oz. \\
+$ P(A|B) = \frac{P(A \cap B)}{P(B)} \rightarrow P(A \cap B) = P(B) \cdot P(A|B) $.
+
+\vaje{
+Naloga: V škatli je 5 belih in 3 modre kroglice. Zapored izvlečemo 2 kroglici. Kolikšna je verjetnost, da je prva bela (dogodek $ A $) in druga modra (dogodek $ B $), če:
+\begin{itemize}
+    \item prvo vrnemo: $ P(A \cap B) = P(A) \cdot P(B) = \frac{5}{8} \cdot \frac{3}{8} = \frac{15}{64} $
+    \item prve ne vrnemo: $ P(A \cap B) = P(A) \cdot P(B|A) = \frac{5}{8} \cdot \frac{3}{7} = \frac{15}{56} $
+\end{itemize}
+}
+
+\vaje{
+Vaje:
+\begin{itemize}
+    \item (učbenik)
+\end{itemize}
+}
+    
+\end{priprava}
