@@ -35,6 +35,8 @@ Ponovimo pomembne lastnosti, ki nam pomagajo pri izpeljavi odvodov:
     $ (\sin x)' = \cos x \\ (\cos x)' = - \sin x \\ (\tan x)' = \frac{1}{\cos^2 x} \\ (\cot x)' = - \frac{1}{\sin^2 x} $
 }
 
+\didopomba{Tu je argument $ x $ v radianih -- če je v stopinjah, imamo sestavljeno funkcijo: $ (\sin (x\text{°}))' = cos(\frac{x\text{°}}{360\text{°}} 2\pi) \cdot (\frac{x\text{°}}{360\text{°}} 2\pi)' = cos(x\text{°}) \cdot \frac{\pi}{180\text{°}} $}
+
 \vaje{Vaje iz teh funkcij, tudi že sestavljene npr.
 \begin{itemize}
     \item $ (\sin^2 x)', (x^5 \cdot \sin {7x})' $ \ldots
@@ -56,8 +58,7 @@ Vemo $ (g \circ f)'(x) = g'(f(x)) \cdot f'(x) $
     (f \circ f^{-1})'(x) & = x' \\
     f'(f^{-1}(x)) \cdot (f^{-1}(x))' & = 1 \\
 \end{align*}
-Sledi
-$$ \textcolor{red}{(f^{-1}(x))' = \frac{1}{f'(f^{-1}(x))}} $$
+Sledi $ \textcolor{red}{(f^{-1}(x))' = \frac{1}{f'(f^{-1}(x))}} $
 
 Zdaj lahko odvajamo tudi krožne funkcije:
 
@@ -69,7 +70,7 @@ $ (\arcsin x)' = \frac{1}{\cos (\arcsin x)} = \frac{1}{\sqrt{1 - \sin^2 (\arcsin
 \textbf{Odvod logaritemske in eksponentne funkcije}
 
 \textcolor{red}{
-    $ (\log_a x)' = \frac{1}{x \cdot \ln a} $ \didopomba{po definiciji, gl. učbenik} \\
+    $ (\log_a x)' = \frac{1}{x \cdot \ln a} $ \didopomba{po definiciji, gl. učbenik ALI pa najprej izpeljemo za $ \ln $ in navaden logaritem zapišemo z novo osnovo. Saj ni važno.} \\
     $ (\ln x)' = \frac{1}{x} $ \didopomba{to sledi iz zgoraj za $ a = e $} \\
     $ (a^x)' = a^x \cdot \ln a $ \didopomba{po formuli za odvod inverzne funkcije}\\
     $ (e^x)' = e^x $ \didopomba{to sledi iz zgoraj za $ a = e $}
@@ -86,6 +87,6 @@ Imejmo krožnico s polmerom $ r = 2 $ in središčem v $ S(0, 0) $. Točka $ A $
     \item Enačbo $ x^2 + y^2 = 4 $ odvajamo kot sestavljeno funkcijo (pri tem je $ y $ odvisen od $ x $, torej na $ y $ ne gledamo samo kot na spremenljivko, ampak kot funkcijo) $ \rightarrow 2x + 2 y y' = 0 \rightarrow y' = - \frac{x}{y} $, vstaviš noter $ A $ in dobiš.
 \end{enumerate}
 
-\vaje{podobne vaje; obvezno povezovanje slikce grafov funkcij in njenega odvoda!}
+\vaje{podobne vaje}
     
 \end{priprava}
