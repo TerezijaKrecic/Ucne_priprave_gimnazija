@@ -1,0 +1,85 @@
+%priprava posamezne ure
+%tukaj zaporedoma napisemo{st. zaporedne ure}{datum}{naslov}{poglavje}{oblika dela}{pripomocki}
+\begin{priprava}{}{}{Odvod}{Uporaba odvoda}{frontalna}{tabla}
+
+\didopomba{Že vemo, da nam odvod pove smerni koeficient tangente na graf. Ponovimo to, potem pa se še spomnimo povezave med koeficientom premice in kotom}
+
+\textbf{Enačba tangente in enačba normale}
+
+\vaje{Imejmo funkcijo $ f(x) = x^3 $.
+\begin{itemize}
+    \item Zapiši enačbo tangente na graf $ f $ v točki $ T(2, y_0) $. \didopomba{$ y_t = 12x - 16 $}
+    \item Zapiši še enačbo normale \didopomba{$ k_n = - \frac{1}{k_t} $} v isti točki. \didopomba{$ y_n = - \frac{1}{12} x + \frac{49}{6} $}
+\end{itemize}    
+}
+
+\vaje{Vaje iz tega}
+
+\textbf{Kot med grafom funkcije in koordinatnima osema}
+
+Najprej se spomnimo \didopomba{nariši slikco in označi kote}: Kot med premico in abscisno osjo \didopomba{pozitivnim poltrakom, drugi kot je potem 180° $ - \phi $}:
+$$ \tan \phi = k $$
+
+Kot med funkcijo in abscisno osjo je potem kot med $ x $-osjo in tangento na $ f $ v presečišču s to osjo \didopomba{slikca}: $ \tan \alpha = k_t = f'(x_0) $.
+
+Kot $ \beta $ med funkcijo in ordinatno osjo se izračuna posredno preko kota z abscisno osjo (torej $ \beta = $ 90° $ - \alpha $, kjer se za $ x_0 $ vzame $ x = 0 $.) \didopomba{$ \tan\beta = \cot \alpha = \frac{1}{\tan \alpha} = \frac{1}{f'(0)} $}
+
+\vaje{Vaje iz tega}
+
+\textbf{Kot med funkcijama} \didopomba{nariši slikco in naj sami predlagajo, da je to kot med tangentama}
+
+Spomnimo se: Kot med premicama:
+$$ \tan \phi = \left| \frac{k_2 - k_1}{1 + k_1 k_2} \right| $$
+
+Oba koeficienta izračunamo z odvodom obeh funkcij v točki presečišča in vstavimo noter.
+
+\vaje{Vaje iz tega}
+
+\textbf{Naraščanje in padanje funkcije}
+
+\didopomba{Narišeš neko valovito funkcijo. Itak znajo pokazati, kje narašča in kje pada, zdaj je pa treba to še formalizirati.}
+
+\emph{Funkcija je na intervalu $ (a, b) $ \textbf{naraščajoča}, če je $ f'(x) > 0 $ za vsak $ x $ iz tega intervala.}
+
+\emph{Funkcija je na intervalu $ (a, b) $ \textbf{padajoča}, če je $ f'(x) < 0 $ za vsak $ x $ iz tega intervala.}
+
+\didopomba{Kaj pa tam, kjer je $ f'(x) = 0 $?}
+
+\textbf{Stacionarne točke}
+
+To so točke, v katerih je odvod funkcije ničeln ($ f(x)' = 0 $) \didopomba{kar pomeni vodoravno tangento}. \didopomba{Katere točke na grafu so to? -- Na vrhovih in dolinah, pa tudi sedlih. PAZI -- ŠPIČKA NI STACIONARNA TOČKA, KER ODVOD TAM NI DEFINIRAN}. ``Vrhove'' imenujemo \textbf{lokalni maksimum}, ``doline'' pa \textbf{lokalni minumum}. Oboje skupaj imenujemo \textbf{lokalni ekstremi}. ``Sedlo'' pa ni ekstrem. Za vse troje mora torej veljati $ f(x)'= 0 $, za vsako posebej pa še:
+
+\newpage
+
+\begin{itemize}
+    \item LOKALNI MAKSIMUM: Vrednosti funkcije v okolici te točke so manjše od vrednost te točke. Odvod spremeni predznak \didopomba{slikca $ x $-osi in kvadratne funkcije, levo je odvod +, desno pa -}
+    \item LOKALNI MINIMUM: Vrednosti funkcije v okolici te točke so večje od vrednost te točke. Odvod spremeni predznak \didopomba{slikca $ x $-osi in kvadratne funkcije, levo je odvod -, desno pa +}
+    \item SEDLO: Vrednosti funkcije v okolici te točke so na eni strani manjše, na drugi strani pa večje od vrednost te točke. Odvod čez točko ne spremeni predznaka \didopomba{slikca $ x $-osi in sedla, levo in desno je odvod + ali pa -}
+\end{itemize}
+    
+Poleg lokalnih ekstremov pa imamo še globalne ekstreme -- to sta \textbf{globalni maksimum} in \textbf{globalni minimum}. To sta največja/najmanjša vrednost $ f $ na danem intervalu. Teh ne določimo z odvodom. \didopomba{slikca vijuge, kjer je max. vrednost na krajišču, kjer se vidi, da odvod ni 0}
+
+\didopomba{Lahko povzameš, da se ne zmedejo: imamo ekstreme (globalne in lokalne), ter sedla. Lokalni ekstremi in sedla se imenujejo stac. točke in je tam odvod enak 0.}
+
+\vaje{Vaje:
+\begin{itemize}
+    \item zapis ekstremov dane funkcije
+    \item nariši funkcijo, določi ničle, začetno vrednost, pole, ekstreme \didopomba{sedaj se racionalne funkcije lahko riše še bolj natančno!}
+    \item Dokaži, da $ f(x) = \frac{3 - x^2}{x^2} $ nima ekstrema (odvod ne more biti 0)
+\end{itemize}
+}
+
+\textbf{Ekstremalni problemi}
+
+\begin{itemize}
+    \item Bolnik dobi zdravilo. Racionalna funkcija $ f(t) = \frac{8t}{t^2 + 4} $ opisuje koncentracijo zdravila v krvi v mg/liter v odvisnosti od časa $ t $ po zaužitem zdravilu. Kdaj bo koncentracija zdravila največja?
+    
+    \didopomba{pokažemo še graf in vsi vidijo, da je tam en hribček, torej iščemo $ t $, kjer bo $f(t)' = 0 $. Dobimo $ t = \pm 2 $, torej po dveh urah ($ -2 $ uri ni smiselno -- torej je treba rezultat vedno še interpretirati!)}
+
+    \item Imamo karton velikosti 80x60 cm. Kakšne vogale moramo odrezati lepenki, da lahko iz nje dobimo škatlo (brez pokrova) z največjo prostornino? (11{,}31 cm)
+    \item Ob hiši stoji pasja uta 1x1 m. Kupili smo za 9 m ograje. Kolikšna naj bo dolžina in širina pesjaka, da bo imel pes največ prostora za gibanje? (2{,}5x5 m)
+    \item Ipd. (učbenik)
+\end{itemize}
+
+
+\end{priprava}
